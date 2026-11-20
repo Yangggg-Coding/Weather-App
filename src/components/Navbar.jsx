@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import SearchBar from "./SearchBar";
 
-export default function Navbar() {
+export default function Navbar(city) {
   return (
     <header className="navbar">
       <div className="navbar__left">

@@ -22,7 +22,11 @@ function App() {
         {weather && !error && (
           <>
             <div className="dashboard__top">
-              <Hero location={location} current={weather.current} />
+              <Hero
+                location={location}
+                current={weather.current}
+                daily={weather.daily}
+              />
               <ChanceToRain daily={weather.daily} />
             </div>
             <div className="dashboard__bottom">
