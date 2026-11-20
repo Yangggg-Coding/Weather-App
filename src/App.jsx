@@ -3,8 +3,7 @@ import Hero from "./components/Hero";
 import GlobalMap from "./components/GlobalMap";
 import ChanceToRain from "./components/ChanceToRain";
 import OtherLargeCity from "./components/OtherLagesCity";
-import { getLocation } from "./services/weatherApi";
-import { getForecast } from "./services/weatherApi";
+
 import "./App.css";
 
 function App() {
