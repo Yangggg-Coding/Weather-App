@@ -1,18 +1,15 @@
-import {
-  Bell,
-  LayoutGrid,
-  MapPin,
-  Moon,
-  Sun,
-  UserRound,
-} from "lucide-react";
+import { Bell, LayoutGrid, MapPin, Moon, Sun, UserRound } from "lucide-react";
 import SearchBar from "./SearchBar";
 
-export default function Navbar(city) {
+export default function Navbar({ onSearch }) {
   return (
     <header className="navbar">
       <div className="navbar__left">
-        <button className="navbar__icon-button" type="button" aria-label="Open menu">
+        <button
+          className="navbar__icon-button"
+          type="button"
+          aria-label="Open menu"
+        >
           <LayoutGrid size={19} strokeWidth={2.5} />
         </button>
         <button
@@ -29,16 +26,28 @@ export default function Navbar(city) {
         </div>
       </div>
 
-      <SearchBar />
+      <SearchBar onSearch={onSearch} />
 
       <div className="navbar__actions">
-        <button className="navbar__theme-icon" type="button" aria-label="Light theme">
+        <button
+          className="navbar__theme-icon"
+          type="button"
+          aria-label="Light theme"
+        >
           <Sun size={21} />
         </button>
-        <button className="navbar__moon-button" type="button" aria-label="Dark theme">
+        <button
+          className="navbar__moon-button"
+          type="button"
+          aria-label="Dark theme"
+        >
           <Moon size={21} fill="currentColor" />
         </button>
-        <button className="navbar__avatar" type="button" aria-label="Open profile">
+        <button
+          className="navbar__avatar"
+          type="button"
+          aria-label="Open profile"
+        >
           <UserRound size={20} />
         </button>
       </div>
