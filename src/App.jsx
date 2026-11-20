@@ -7,20 +7,19 @@ import "./App.css";
 
 function App() {
   return (
-    <>
+    <div className="app-shell">
       <Navbar />
-      <div>
-        <div>
-          {" "}
+      <main className="dashboard">
+        <div className="dashboard__top">
           <Hero />
-          <GlobalMap />
-        </div>
-        <div>
           <ChanceToRain />
+        </div>
+        <div className="dashboard__bottom">
+          <GlobalMap />
           <OtherLargeCity />
         </div>
-      </div>
-    </>
+      </main>
+    </div>
   );
 }
 

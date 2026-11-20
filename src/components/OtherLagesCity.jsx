@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 export default function OtherLargeCity() {
   const LargeCity = [
     {
@@ -24,33 +24,31 @@ export default function OtherLargeCity() {
     },
   ];
   return (
-    <>
-      <section>
-        <div>
-          <h3>Other large cities</h3>
-          <div>
-            <p>Show All</p>
-            <ArrowRight size={20} />
-          </div>
-        </div>
-        <div>
-          {LargeCity.map((data) => {
-            return (
-              <div key={data.id}>
-                <div>
-                  <span>{data.name}</span>
-                  <p>{data.city}</p>
-                  <p>{data.data}</p>
-                </div>
-                <div>
-                  <p>{data.icon}</p>
-                  <p>{data.temp}</p>
-                </div>
+    <section className="cities-section">
+      <div className="cities-section__head">
+        <h3>Other large cities</h3>
+        <button type="button" className="cities-section__show-all">
+          <span>Show All</span>
+          <ChevronRight size={13} />
+        </button>
+      </div>
+      <div className="cities-list">
+        {LargeCity.map((data) => {
+          return (
+            <article className="city-card" key={data.city}>
+              <div>
+                <span>{data.name}</span>
+                <p>{data.city}</p>
+                <p>{data.data}</p>
               </div>
-            );
-          })}
-        </div>
-      </section>
-    </>
+              <div>
+                <p>{data.icon}</p>
+                <p>{data.temp}</p>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
   );
 }

@@ -175,3 +175,507 @@
     width: 40px;
   }
 }
+
+.dashboard__top,
+.dashboard__bottom {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) 225px;
+}
+
+.forecast-section {
+  min-width: 0;
+}
+
+.forecast-toolbar {
+  align-items: center;
+  display: flex;
+  height: 66px;
+  justify-content: space-between;
+}
+
+.forecast-tabs,
+.forecast-actions {
+  align-items: center;
+  display: flex;
+}
+
+.forecast-tabs {
+  gap: 24px;
+}
+
+.forecast-tabs button,
+.forecast-actions button {
+  background: transparent;
+  border: 0;
+  color: #9296a5;
+  font-size: 13px;
+  padding: 8px 0;
+}
+
+.forecast-tabs button.active {
+  color: #f4f5fa;
+  font-weight: 700;
+}
+
+.forecast-actions {
+  gap: 8px;
+  margin-left: 12px;
+}
+
+.forecast-actions button {
+  background: #292a35;
+  border-radius: 999px;
+  height: 34px;
+  min-width: 90px;
+}
+
+.forecast-actions button.active {
+  background: #dcecf7;
+  color: #20232b;
+  font-weight: 700;
+}
+
+.forecast-actions span {
+  display: none;
+}
+
+.forecast-list {
+  background: #191a24;
+  border-radius: 14px;
+  display: grid;
+  gap: 0;
+  grid-template-columns: 172px repeat(6, minmax(68px, 1fr));
+  height: 184px;
+  overflow: hidden;
+  padding: 12px;
+}
+
+.forecast-card {
+  align-items: center;
+  border-right: 1px solid rgba(255,255,255,.025);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 8px 4px;
+  text-align: center;
+}
+
+.forecast-card h3 {
+  font-size: 12px;
+  margin: 0 0 11px;
+}
+
+.forecast-card p {
+  font-size: 29px;
+  line-height: 1;
+  margin: 5px 0 10px;
+}
+
+.forecast-card strong {
+  font-size: 21px;
+}
+
+.forecast-card--featured {
+  align-items: stretch;
+  background: #f4fbff;
+  border: 0;
+  border-radius: 12px;
+  color: #20232c;
+  justify-content: flex-start;
+  padding: 13px 12px 9px;
+  text-align: left;
+}
+
+.forecast-card__head {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.forecast-card__head h3 {
+  margin: 0;
+}
+
+.forecast-card__head time {
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.forecast-card__main {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 7px;
+}
+
+.forecast-card__main strong {
+  font-size: 38px;
+  letter-spacing: -3px;
+}
+
+.forecast-card__main span {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.forecast-card dl {
+  display: grid;
+  font-size: 7px;
+  gap: 2px 5px;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+}
+
+.forecast-card dl div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.forecast-card dt,
+.forecast-card dd {
+  margin: 0;
+}
+
+.forecast-card dt {
+  color: #777e89;
+}
+
+.forecast-card dd {
+  font-weight: 700;
+  text-align: right;
+}
+
+.rain-panel {
+  height: 250px;
+  padding-top: 10px;
+}
+
+.rain-panel h3 {
+  color: #cfd1da;
+  font-size: 12px;
+  height: 56px;
+  margin: 0;
+  padding: 17px 0 0;
+}
+
+.rain-chart {
+  align-items: flex-end;
+  background: #191a24;
+  border-radius: 12px 12px 0 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 126px;
+  padding: 16px 18px 0;
+}
+
+.rain-column {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  position: relative;
+  flex-direction: column;
+}
+
+.rain-column span {
+  color: #858896;
+  font-size: 8px;
+  position: absolute;
+  top: -11px;
+}
+
+.rain-column i {
+  background: #f0f1f5;
+  border-radius: 3px 3px 0 0;
+  display: block;
+  width: 4px;
+}
+
+.rain-times {
+  background: #191a24;
+  border-radius: 0 0 12px 12px;
+  color: #777b89;
+  display: flex;
+  font-size: 7px;
+  justify-content: space-between;
+  padding: 7px 8px 10px;
+}
+
+.dashboard__bottom {
+  margin-top: 12px;
+}
+
+.global-map-section__head,
+.cities-section__head {
+  align-items: center;
+  display: flex;
+  height: 48px;
+  justify-content: space-between;
+}
+
+.global-map-section__head h3,
+.cities-section__head h3 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.global-map-section__head button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #9296a5;
+  display: flex;
+  font-size: 10px;
+  gap: 5px;
+}
+
+.global-map {
+  background:
+    linear-gradient(rgba(20,23,38,.18), rgba(20,23,38,.18)),
+    url("/map.webp") center / contain no-repeat,
+    #1a1b29;
+  border-radius: 12px;
+  height: clamp(280px, 24vw, 360px);
+  min-height: 280px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.map-control {
+  align-items: center;
+  background: #292c3c;
+  border: 0;
+  border-radius: 50%;
+  color: #dfe2ea;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  position: absolute;
+  width: 30px;
+  z-index: 3;
+}
+
+.map-control--left {
+  left: 14px;
+  top: 14px;
+}
+
+.map-control--right {
+  right: 14px;
+  top: 14px;
+}
+
+.map-pin {
+  background: #edf2f5;
+  border: 4px solid rgba(34,37,52,.9);
+  border-radius: 50%;
+  box-shadow: 0 0 14px rgba(245,246,250,.38);
+  height: 9px;
+  position: absolute;
+  width: 9px;
+  z-index: 2;
+}
+
+.map-pin--one { left: 38%; top: 46%; }
+.map-pin--two { left: 57%; top: 38%; }
+.map-pin--three { left: 78%; top: 56%; }
+
+.map-label {
+  background: #252739;
+  border-radius: 999px;
+  font-size: 9px;
+  left: 74%;
+  padding: 7px 10px;
+  position: absolute;
+  top: 68%;
+  z-index: 2;
+}
+
+.map-card {
+  background: #fff;
+  border-radius: 12px;
+  bottom: 10px;
+  color: #20222a;
+  left: 12px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  width: 156px;
+  z-index: 4;
+}
+
+.map-card p {
+  font-size: 9px;
+  line-height: 1.35;
+  margin: 4px 0 8px;
+}
+
+.map-card__preview {
+  background:
+    linear-gradient(135deg, rgba(37,44,68,.1), rgba(12,16,28,.35)),
+    url("/map.webp") 10% 70% / 180% no-repeat,
+    #aeb6cb;
+  border-radius: 8px;
+  height: 58px;
+  margin-bottom: 8px;
+}
+
+.map-card button {
+  background: #dfe0f4;
+  border: 0;
+  border-radius: 999px;
+  color: #353844;
+  font-size: 9px;
+  height: 30px;
+  width: 100%;
+}
+
+.cities-section__head {
+  padding: 0;
+}
+
+.cities-section__head div {
+  align-items: center;
+  display: flex;
+  gap: 5px;
+}
+
+.cities-section__head p,
+.cities-section__show-all span {
+  color: #9296a5;
+  font-size: 10px;
+  margin: 0;
+}
+
+.cities-section__show-all {
+  align-items: center;
+  background: #292a35;
+  border: 0;
+  border-radius: 999px;
+  color: #9296a5;
+  display: inline-flex;
+  gap: 5px;
+  height: 34px;
+  justify-content: center;
+  padding: 0 12px;
+}
+
+.cities-section__show-all:hover,
+.global-map-section__head button:hover {
+  background: #343643;
+  color: #f1f2f6;
+}
+
+.cities-list {
+  display: grid;
+  gap: 8px;
+  grid-template-rows: repeat(3, 88px);
+}
+
+.city-card {
+  align-items: center;
+  background: #2a2b36;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+}
+
+.city-card span,
+.city-card p {
+  color: #8f92a1;
+  font-size: 9px;
+  margin: 0;
+}
+
+.city-card div > p:nth-of-type(1) {
+  color: #f1f2f6;
+  font-size: 13px;
+  margin: 3px 0 6px;
+}
+
+.city-card div:last-child {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.city-card div:last-child p:first-child {
+  font-size: 24px;
+  line-height: 1;
+  margin: 0 0 3px;
+}
+
+.city-card div:last-child p:last-child {
+  color: #f1f2f6;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (max-width: 980px) {
+  .dashboard__top,
+  .dashboard__bottom {
+    grid-template-columns: minmax(0, 1fr) 200px;
+  }
+
+  .forecast-list {
+    grid-template-columns: 172px repeat(6, 74px);
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    border-radius: 0;
+  }
+
+  .navbar {
+    border-radius: 0;
+  }
+
+  .dashboard {
+    padding: 0 12px 18px;
+  }
+
+  .dashboard__top,
+  .dashboard__bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .rain-panel {
+    display: none;
+  }
+
+  .forecast-toolbar {
+    height: 56px;
+  }
+
+  .forecast-actions button {
+    display: none;
+  }
+
+  .forecast-tabs {
+    gap: 14px;
+  }
+
+  .forecast-list {
+    height: 188px;
+  }
+
+  .global-map {
+    height: 320px;
+  }
+
+  .cities-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 88px;
+  }
+
+  .cities-section {
+    margin-top: 8px;
+  }
+}
