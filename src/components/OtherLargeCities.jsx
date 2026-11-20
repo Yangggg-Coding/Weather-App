@@ -1,5 +1,5 @@
 import { ChevronRight } from "lucide-react";
-export default function OtherLargeCity() {
+export default function OtherLargeCities() {
   const LargeCity = [
     {
       name: "US",

@@ -1,24 +1,36 @@
+import { useState } from "react";
+import useWeather from "./hook/useWeather";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import GlobalMap from "./components/GlobalMap";
 import ChanceToRain from "./components/ChanceToRain";
-import OtherLargeCity from "./components/OtherLagesCity";
-
+import OtherLargeCities from "./components/OtherLargeCities";
+import ErrorMessage from "./components/ErrorMessage";
 import "./App.css";
 
 function App() {
+  const [city, setCity] = useState("Phnom Penh");
+  const { weather, location, loading, error } = useWeather(city);
+
   return (
     <div className="app-shell">
-      <Navbar />
+      <Navbar onSearch={setCity} />
+
       <main className="dashboard">
-        <div className="dashboard__top">
-          <Hero />
-          <ChanceToRain />
-        </div>
-        <div className="dashboard__bottom">
-          <GlobalMap />
-          <OtherLargeCity />
-        </div>
+        {loading && <p className="status">Loading weather…</p>}
+        {error && <ErrorMessage message={error} />}
+        {weather && !error && (
+          <>
+            <div className="dashboard__top">
+              <Hero location={location} current={weather.current} />
+              <ChanceToRain daily={weather.daily} />
+            </div>
+            <div className="dashboard__bottom">
+              <GlobalMap location={location} />
+              <OtherLargeCities onSelect={setCity} />
+            </div>
+          </>
+        )}
       </main>
     </div>
   );
