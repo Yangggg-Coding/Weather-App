@@ -2,7 +2,7 @@ import { useState } from "react";
 import useWeather from "./hook/useWeather";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import GlobalMap from "./components/GlobalMap";
+
 import ChanceToRain from "./components/ChanceToRain";
 import OtherLargeCities from "./components/OtherLargeCities";
 import ErrorMessage from "./components/ErrorMessage";
@@ -30,7 +30,6 @@ function App() {
               <ChanceToRain daily={weather.daily} />
             </div>
             <div className="dashboard__bottom">
-              <GlobalMap location={location} />
               <OtherLargeCities onSelect={setCity} />
             </div>
           </>

@@ -15,7 +15,6 @@ export default function useWeather(city) {
     async function load() {
       setLoading(true);
       setError(null);
-
       try {
         const place = await getLocation(city);
         const forecast = await getForecast(place.latitude, place.longitude);
@@ -30,9 +29,8 @@ export default function useWeather(city) {
         if (!ignore) setLoading(false);
       }
     }
-
     load();
-
+    
     return () => {
       ignore = true;
     };
